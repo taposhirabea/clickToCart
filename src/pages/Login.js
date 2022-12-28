@@ -45,25 +45,25 @@ export default function Login({setUser}) {
 
 
     if (response) {
-      // const {
-      //   jwt: token,
-      //   user: { email }
-      // } = response.data;
-      // const newUser = { token, email };
-      // userLogin(newUser);
-      // showAlert({
-      //   msg: `you are logged in : ${email}. shop away my friend`
-      // });
-      // navigate('/products');
-      console.log(response.data)
+      const {
+        jwt: token,
+        user: { email }
+      } = response.data;
+      const newUser = { token, email };
+      userLogin(newUser);
+      showAlert({
+        msg: `you are logged in : ${email}. shop away my friend`
+      });
+      navigate('/products');
+     console.log(response.data)
     } 
-    // else {
-    //   showAlert({
-    //     msg: "there was an error. please try again...",
-    //     type: "danger"
-    //   });
-    //   //  show alert
-    // }
+    else {
+      showAlert({
+        msg: "there was an error. please try again...",
+        type: "danger"
+      });
+      //  show alert
+    }
   };
 
   return (

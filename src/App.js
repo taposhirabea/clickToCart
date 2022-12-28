@@ -16,6 +16,8 @@ import ProductDetails from "./pages/ProductDetails";
 //components
 import Header from './components/Header';
 import Alert from "./components/Alert";
+import PrivateRoute from "./components/PrivateRoute";
+import ScrollButton from "./components/ScrollButton";
 
 function App () {
   const [user, setUser] = useState(null)
@@ -23,6 +25,7 @@ function App () {
     <>
     <Header />
     <Alert/>
+    <ScrollButton />
     <Routes>
     <Route  path='/header' element={<Header/>} />
     <Route exact path='/' element={<Home/>} />

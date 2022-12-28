@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route, Navigate } from "react-router-dom";
 import { UserContext } from "../context/user";
 
 export default function PrivateRoute({ children, ...rest }) {
@@ -9,7 +9,7 @@ export default function PrivateRoute({ children, ...rest }) {
     <Route
       {...rest}
       render={() => {
-        return user.token ? children : <Redirect to="/login"></Redirect>;
+        return user.token ? children : <Navigate to="/login"></Navigate>;
       }}
     ></Route>
   );

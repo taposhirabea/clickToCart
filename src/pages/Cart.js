@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 // import {UserContext} from '../context/user'
 
 export default function Cart() {
-  let user = false;
+  let user = true;
   const { cart, total } = React.useContext(CartContext);
 
   if (cart.length === 0) {
@@ -22,7 +22,7 @@ export default function Cart() {
       <h2>total : $ {total}</h2>
       {user ? (
         <Link to="/checkout" className="btn btn-primary btn-block">
-          checkout
+          Checkout
         </Link>
       ) : (
         <Link to="/login" className="btn btn-primary btn-block">

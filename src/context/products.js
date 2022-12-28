@@ -2,8 +2,6 @@ import React from "react";
 import axios from "axios";
 import url from "../utils/URL";
 import { featuredProducts, flattenProducts, paginate } from "../utils/helpers";
-//import {items} from './ProductData'
-
 export const ProductContext = React.createContext();
 
 export default function ProductProvider({ children }) {
@@ -39,10 +37,7 @@ export default function ProductProvider({ children }) {
 
   React.useEffect(() => {
     setLoading(true);
-      axios.get(`${url}`, {
-        identifier: 'jihadmahmud71@gmail.com',
-        password: 'Jihadmahmud71',
-      }).then(response => {
+      axios.get(`https://course-api.com/react-store-products`).then(response => {  //axios.get(`${url}/api/products`, {
       const featured = featuredProducts(flattenProducts(response.data));
       const products = flattenProducts(response.data);
       setProducts(products);
@@ -52,8 +47,6 @@ export default function ProductProvider({ children }) {
     });
     return () => {};
   }, []);
-
-
   React.useLayoutEffect(() => {
     let newProducts = [...products].sort((a, b) => a.price - b.price);
     const { search, category, shipping, price } = filters;
