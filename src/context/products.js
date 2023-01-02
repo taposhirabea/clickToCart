@@ -37,7 +37,7 @@ export default function ProductProvider({ children }) {
 
   React.useEffect(() => {
     setLoading(false);
-      axios.get(`https://course-api.com/react-store-products`).then(response => {  //axios.get(`${url}/api/products`, {
+      axios.get(`https://back-api.vercel.app/service?fbclid=IwAR2I-ryvMj9Czkyey_VqNGTb3qTGsdYBHt7-DmMFXVOb0VtWFloLgkBZr0s`).then(response => {  //axios.get(`${url}/api/products`, {
       const featured = featuredProducts(flattenProducts(response.data));
       const products = flattenProducts(response.data);
       setProducts(products);
@@ -68,11 +68,16 @@ export default function ProductProvider({ children }) {
         }
       });
     }
-    if (search !== "") {
+    // if (search !== "") {
+    //   newProducts = newProducts.filter(item => {
+    //     let title = item.title.toLowerCase().trim();
+    //     return title.startsWith(search) ? item : null;
+    //   });
+    // }
+    if (search !== ""){
       newProducts = newProducts.filter(item => {
-        let title = item.title.toLowerCase().trim();
-        return title.startsWith(search) ? item : null;
-      });
+        item.title.toLowerCase().startsWith(search)
+      })
     }
 
     setPage(0);

@@ -46,6 +46,9 @@ export default function About() {
   display: grid;
   gap: 4rem;
   background: var(--clr-primary-8);
+  .section-title h2{
+    text-align: left;
+  }
   img {
     width: 100%;
     display: block;
@@ -66,6 +69,11 @@ export default function About() {
   }
   .underline {
     margin-left: 0;
+    width: 6rem;
+  height: 0.25rem;
+  background: #49a6e9;
+  background: var(--clr-primary-5);
+  margin-right: auto;
   }
   @media (min-width: 992px) {
     grid-template-columns: 1fr 1fr;
@@ -73,13 +81,13 @@ export default function About() {
   .page {
   min-height: calc(100vh - (20vh + 10rem));
 }
-.title .underline {
+/* .title .underline {
   width: 6rem;
   height: 0.25rem;
   background: #49a6e9;
   background: var(--clr-primary-5);
   margin-right: auto;
-}
+} */
 /* section */
 .section {
   padding: 5rem 0;
