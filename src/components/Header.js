@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+//import logo from "../assets/logo.svg";
 import CartLink from "./Cart/CartLink";
 import { UserContext } from "../context/user";
 import LoginLink from "../components/LoginLink";
@@ -12,6 +13,7 @@ export default function Header() {
 
       <img height={80} src='https://media-exp1.licdn.com/dms/image/C4E22AQFgp3RKOiqsPg/feedshare-shrink_2048_1536/0/1669923794718?e=1672876800&v=beta&t=Y-YCe27UPMeTnFO6MLwVDWfeQIy_7-Uf_LGhTreWIpE' alt= ""/>
 
+      {/* <img src={logo} alt="vintage tech logo" className="logo" /> */}
       <nav>
         <ul>
           <div>
@@ -26,7 +28,7 @@ export default function Header() {
             </li>
             {user.token && (
               <li>
-                <Link to="/checkout">checkout</Link>
+                <Link to="/checkout">Checkout</Link>
               </li>
             )}
           </div>

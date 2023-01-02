@@ -60,10 +60,10 @@ function Checkout(props) {
   if (cart.length < 1) return <EmptyCart />;
   return (
     <section className="section form">
-      <h2 className="section-title">checkout</h2>
+      <h2 className="section-title">Checkout</h2>
       <form className="checkout-form">
         <h3>
-          order total : <span>${total}</span>
+          order total : <span>{total}৳</span>
         </h3>
         {/* single input */}
         <div className="form-control">

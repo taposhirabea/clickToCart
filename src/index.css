@@ -26,10 +26,25 @@ Variables
 :root {
   /* --primaryColor: #9e3aa3; */
   /* --primaryDarkColor: #4e1d51; */
-  --primaryColor: #f15025;
-  --primaryDarkColor: #c02c03;
-  --primaryFont: "Catamaran", sans-serif;
-  --slantedFont: "Kaushan Script", cursive;
+  --clr-primary-1: hsl(22, 28%, 21%);
+  --clr-primary-2: hsl(22, 28%, 29%);
+  --clr-primary-3: hsl(22, 28%, 37%);
+  --clr-primary-5: hsl(22, 31%, 52%);
+  --clr-primary-7: hsl(22, 31%, 67%);
+  --clr-primary-8: rgba(250, 220, 235, 0.534);
+  --clr-primary-10: hsl(22, 31%, 88%);
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-black: #222;
+  --clr-white: #fff;
+
+
+  --primaryColor: #9b7a35f1;
+  --primaryDarkColor: #55d5df;
+  /* --primaryFont: "Catamaran", sans-serif; */
+  --primaryFont: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* --slantedFont: "Kaushan Script", cursive; */
+  --slantedFont:  'Segoe UI', Roboto;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBackground: #ececec;
@@ -37,12 +52,13 @@ Variables
   --mainBlack: #222;
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
-  --mainRed: #bd0303;
+  --mainRed: #c75f7e;
   --mainTransition: all 0.3s linear;
-  --mainSpacing: 0.3rem;
+  --mainSpacing: 0.1rem;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --mainBorderRadius: 0.25rem;
+  --radius: 0.25rem;
   --smallWidth: 85vw;
   --maxWidth: 40rem;
   --fullWidth: 1170px;
@@ -271,6 +287,7 @@ Error
 .error-page {
   display: flex;
   justify-content: center;
+  margin-bottom: 14.67rem;
 }
 .error-container {
   text-align: center;
@@ -408,6 +425,7 @@ Cart
   width: var(--smallWidth);
   margin: 0 auto;
   max-width: var(--maxWidth);
+  padding-bottom: 8.1rem;
 }
 .cart-items h2 {
   margin-bottom: 2rem;
@@ -575,7 +593,7 @@ Alert
   transform: translate(-50%, -50%);
   display: none;
   z-index: 10;
-  background: green;
+  background: rgba(61, 60, 61, 0.973);
   width: 24rem;
   padding: 2.5rem 1.5rem;
   text-align: center;

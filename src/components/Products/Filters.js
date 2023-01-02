@@ -76,7 +76,7 @@ export default function Filters() {
               checked={price === 0}
               onChange={updateFilters}
             />
-            $0 - $300
+            0৳ - 300৳
           </label>
           <label>
             <input
@@ -86,7 +86,7 @@ export default function Filters() {
               checked={price === 300}
               onChange={updateFilters}
             />
-            $300 - $650
+            300৳ - 650৳
           </label>
           <label>
             <input
@@ -96,7 +96,7 @@ export default function Filters() {
               checked={price === 650}
               onChange={updateFilters}
             />
-            Over $650
+            Over 650৳
           </label>
         </div>
         {/* end of price */}

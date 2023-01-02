@@ -36,7 +36,7 @@ export default function ProductProvider({ children }) {
   };
 
   React.useEffect(() => {
-    setLoading(true);
+    setLoading(false);
       axios.get(`https://course-api.com/react-store-products`).then(response => {  //axios.get(`${url}/api/products`, {
       const featured = featuredProducts(flattenProducts(response.data));
       const products = flattenProducts(response.data);
