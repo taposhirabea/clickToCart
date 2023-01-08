@@ -33,6 +33,9 @@ const Services = () => {
 }
 
 const Wrapper = styled.section`
+p{
+  font-size: 1.4rem;
+}
   .header-sec h3,
   .service h4 {
     color: var(--clr-primary-1);

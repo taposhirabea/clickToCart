@@ -36,6 +36,7 @@ const Wrapper = styled.section`
     line-height: 2;
     max-width: 45em;
     color: var(--clr-grey-5);
+    font-size: 1.4rem;
   }
   .contact-form {
     width: 90vw;

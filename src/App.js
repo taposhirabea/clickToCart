@@ -18,12 +18,14 @@ import Alert from "./components/Alert";
 import PrivateRoute from "./components/PrivateRoute";
 import ScrollButton from "./components/ScrollButton";
 import Footer from "./components/Footer";
+import Sidebar from "./components/Sidebar";
 
 function App () {
 
   return (
     <>
     <Header />
+    <Sidebar/>
     <Alert/>
     <ScrollButton />
     <Routes>

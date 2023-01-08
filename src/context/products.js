@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useReducer } from "react";
 import axios from "axios";
 import url from "../utils/URL";
+import { SIDEBAR_OPEN, SIDEBAR_CLOSE } from '../action'
+import reducer from '../reducers/products_reducer'
 import { featuredProducts, flattenProducts, paginate } from "../utils/helpers";
 export const ProductContext = React.createContext();
 
 export default function ProductProvider({ children }) {
+  const [isSidebarOpen, setIsSidebarOpen] =React.useState(false);
   const [loading, setLoading] = React.useState(false);
   const [products, setProducts] = React.useState([]);
   const [featured, setFeatured] = React.useState([]);
@@ -17,6 +20,13 @@ export default function ProductProvider({ children }) {
     shipping: false,
     price: "all"
   });
+  const [state, dispatch] = useReducer(reducer, isSidebarOpen)
+  const openSidebar = () => {
+    dispatch({ type: SIDEBAR_OPEN })
+  }
+  const closeSidebar = () => {
+    dispatch({ type: SIDEBAR_CLOSE })
+  }
   const changePage = index => {
     setPage(index);
   };
@@ -87,6 +97,7 @@ export default function ProductProvider({ children }) {
   return (
     <ProductContext.Provider
       value={{
+        ...state,
         products,
         loading,
         featured,
@@ -94,7 +105,9 @@ export default function ProductProvider({ children }) {
         page,
         changePage,
         filters,
-        updateFilters
+        updateFilters,
+        openSidebar,
+        closeSidebar
       }}
     >
       {children}
