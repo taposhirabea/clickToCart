@@ -96,6 +96,7 @@ export default function About() {
   width: 90vw;
   margin: 0 auto;
   max-width: var(--max-width);
+
 }
 
 @media screen and (min-width: 992px) {

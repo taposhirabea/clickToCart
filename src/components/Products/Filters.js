@@ -50,7 +50,7 @@ export default function Filters() {
               checked={shipping}
               onChange={updateFilters}
             />
-            <label htmlFor="shipping">free shipping</label>
+            <label htmlFor="shipping">free delivery</label>
           </div>
           {/* end of free shipping */}
         </div>

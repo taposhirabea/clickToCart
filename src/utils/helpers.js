@@ -22,7 +22,7 @@ export function featuredProducts(data) {
 }
 
 export function paginate(products) {
-  const itemsPerPage = 9;
+  const itemsPerPage = 12;
   const numberOfPages = Math.ceil(products.length / itemsPerPage);
   // const newProducts = Array.from({ length: numberOfPages }, (_, index) => {
   //   return products.splice(0, itemsPerPage);

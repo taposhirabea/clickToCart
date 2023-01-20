@@ -43,7 +43,7 @@ Variables
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
 
-  --primaryColor: #9b7a35f1;
+  --primaryColor: hsl(22, 31%, 52%);
   --primaryDarkColor: #55d5df;
   /* --primaryFont: "Catamaran", sans-serif; */
   --primaryFont: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -308,6 +308,7 @@ Product List
 
 .section {
   padding: 4rem 0;
+  padding-bottom: 9.3rem;
 }
 .section-title {
   font-size: 2rem;
@@ -345,6 +346,7 @@ Product List
   display: grid;
   grid-template-rows: auto 1fr;
 }
+
 .img-container {
   padding: 3rem;
   background: rgba(255, 255, 255, 0.5);
@@ -397,6 +399,7 @@ Single Product
   width: var(--smallWidth);
   max-width: var(--fullWidth);
   margin: 4rem auto;
+  margin-bottom: 10.3rem;
 }
 
 .single-product article {
@@ -441,7 +444,7 @@ Cart
   width: var(--smallWidth);
   margin: 0 auto;
   max-width: var(--maxWidth);
-  padding-bottom: 8.1rem;
+  padding-bottom: 18.11rem;
 }
 .cart-items h2 {
   margin-bottom: 2rem;
